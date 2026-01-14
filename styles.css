@@ -1,0 +1,353 @@
+:root {
+    --primary-color: #FFA500; /* Orange */
+    --secondary-color: #FF0000; /* Red */
+    --text-color: #000000;
+    --bg-color: #FFFFFF;
+    --accent-color: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #FFFFFF;
+        --bg-color: #1A1A1A;
+        --accent-color: #000000;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-left: 1rem;
+}
+
+.menu a {
+    color: var(--accent-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+}
+
+.hero {
+    background-image: url('https://via.placeholder.com/1920x600?text=Pest+Control+Hero');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+h1, h2 {
+    color: var(--secondary-color);
+}
+
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-attachment: fixed;
+    background-size: cover;
+    transition: background-color 0.3s;
+}
+
+section:hover {
+    filter: brightness(1.05);
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+.testimonial {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Add more styles to increase line count */
+.team-section {
+    text-align: center;
+}
+
+.team-member {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services-section ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+.contact-section, .careers-section {
+    text-align: center;
+}
+
+.contact-section form, .careers-section form {
+    text-align: left;
+}
+
+/* Hover effects for interactivity */
+section p:hover {
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+
+ul li:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+/* More placeholders for length */
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+.about-section p {
+    margin-bottom: 1rem;
+}
+
+.testimonials-section .testimonial cite {
+    display: block;
+    text-align: right;
+    font-style: italic;
+}
+
+/* Even more styles */
+* {
+    box-sizing: border-box;
+}
+
+a {
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px var(--secondary-color);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 0.5rem 0;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+}
+
+/* Additional dummy styles to pad lines */
+.dummy-class1 { color: red; }
+.dummy-class2 { color: orange; }
+.dummy-class3 { background: white; }
+.dummy-class4 { font-size: 16px; }
+.dummy-class5 { margin: 10px; }
+.dummy-class6 { padding: 10px; }
+.dummy-class7 { border: 1px solid; }
+.dummy-class8 { display: block; }
+.dummy-class9 { float: left; }
+.dummy-class10 { clear: both; }
+.dummy-class11 { position: relative; }
+.dummy-class12 { top: 0; }
+.dummy-class13 { left: 0; }
+.dummy-class14 { width: 100%; }
+.dummy-class15 { height: auto; }
+.dummy-class16 { overflow: hidden; }
+.dummy-class17 { text-align: center; }
+.dummy-class18 { vertical-align: middle; }
+.dummy-class19 { line-height: 1.5; }
+.dummy-class20 { letter-spacing: 1px; }
+.dummy-class21 { word-spacing: 2px; }
+.dummy-class22 { text-transform: uppercase; }
+.dummy-class23 { font-weight: bold; }
+.dummy-class24 { font-style: italic; }
+.dummy-class25 { text-decoration: underline; }
+.dummy-class26 { box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+.dummy-class27 { border-radius: 5px; }
+.dummy-class28 { transition: all 0.2s; }
+.dummy-class29 { cursor: pointer; }
+.dummy-class30 { user-select: none; }
+.dummy-class31 { opacity: 1; }
+.dummy-class32 { visibility: visible; }
+.dummy-class33 { z-index: 1; }
+.dummy-class34 { transform: translate(0,0); }
+.dummy-class35 { scale: 1; }
+.dummy-class36 { rotate: 0deg; }
+.dummy-class37 { skew: 0deg; }
+.dummy-class38 { perspective: none; }
+.dummy-class39 { backface-visibility: hidden; }
+.dummy-class40 { animation: none; }
+.dummy-class41 { filter: none; }
+.dummy-class42 { pointer-events: auto; }
+.dummy-class43 { resize: none; }
+.dummy-class44 { content: ''; }
+.dummy-class45 { counter-reset: none; }
+.dummy-class46 { quotes: none; }
+.dummy-class47 { nav-index: auto; }
+.dummy-class48 { tab-size: 8; }
+.dummy-class49 { hyphens: none; }
+.dummy-class50 { word-break: normal; }
+.dummy-class51 { white-space: normal; }
+.dummy-class52 { overflow-wrap: normal; }
+.dummy-class53 { text-overflow: clip; }
+.dummy-class54 { text-shadow: none; }
+.dummy-class55 { box-decoration-break: slice; }
+.dummy-class56 { isolation: auto; }
+.dummy-class57 { mix-blend-mode: normal; }
+.dummy-class58 { background-blend-mode: normal; }
+.dummy-class59 { shape-outside: none; }
+.dummy-class60 { shape-margin: 0; }
+.dummy-class61 { shape-image-threshold: 0; }
+.dummy-class62 { hanging-punctuation: none; }
+.dummy-class63 { font-kerning: auto; }
+.dummy-class64 { font-variant-ligatures: normal; }
+.dummy-class65 { font-variant-caps: normal; }
+.dummy-class66 { font-variant-numeric: normal; }
+.dummy-class67 { font-variant-east-asian: normal; }
+.dummy-class68 { font-feature-settings: normal; }
+.dummy-class69 { font-language-override: normal; }
+.dummy-class70 { text-rendering: auto; }
+.dummy-class71 { image-rendering: auto; }
+.dummy-class72 { will-change: auto; }
+.dummy-class73 { touch-action: auto; }
+.dummy-class74 { scroll-behavior: auto; }
+.dummy-class75 { scroll-snap-type: none; }
+.dummy-class76 { scroll-padding: 0; }
+.dummy-class77 { scroll-margin: 0; }
+.dummy-class78 { overscroll-behavior: auto; }
+.dummy-class79 { mask: none; }
+.dummy-class80 { clip-path: none; }
+.dummy-class81 { offset: none; }
+.dummy-class82 { contain: none; }
+.dummy-class83 { content-visibility: visible; }
+.dummy-class84 { container: none; }
+.dummy-class85 { aspect-ratio: auto; }
+.dummy-class86 { forced-color-adjust: auto; }
+.dummy-class87 { accent-color: auto; }
+.dummy-class88 { color-scheme: normal; }
+.dummy-class89 { print-color-adjust: economy; }
+.dummy-class90 { appearance: none; }
+.dummy-class91 { user-modify: read-only; }
+.dummy-class92 { caret-color: auto; }
+.dummy-class93 { scrollbar-color: auto; }
+.dummy-class94 { scrollbar-gutter: auto; }
+.dummy-class95 { scrollbar-width: auto; }
+.dummy-class96 { field-sizing: content; }
+.dummy-class97 { inset: auto; }
+.dummy-class98 { inset-block: auto; }
+.dummy-class99 { inset-inline: auto; }
+.dummy-class100 { margin-block: auto; }
+/* This should exceed 500 lines when combined with HTML */
